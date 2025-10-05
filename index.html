@@ -10,50 +10,25 @@
   <main class="wrap">
     <!-- 1. Статичная картинка + реплика -->
     <section class="card" id="step1">
-      <img src="../img/hall.webp" alt="Hall de l’Académie" class="w100">
-      <div class="bubble"><b>Papa:</b> Bienvenue à l’Académie !</div>
-      <audio id="a1" src="../audio/papa_welcome.mp3"></audio>
-      <div class="row">
-        <button onclick="play('a1')">▶️ Écouter</button>
+      <img src="../img/book1_ch1_img1.png" alt="Hall de l’Académie" class="w100">
+      <div class="bubble"><b>Задача:</b> Прослушать и показать пальцем на каждого члена семьи</div>
+      <audio id="a1" src="../audio/b1_ch1_audio1.mp3" controls></audio>
+      <audio id="a1" src="../audio/b1_ch1_bonjour.mp3" controls></audio>
+      <audio id="a1" src="../audio/b1_ch1_123.m4a" controls></audio>
+      <!-- <div class="row">
         <button onclick="next('step1','step2')">Suivant</button>
-      </div>
+      </div> -->
     </section>
 
     <!-- 2. Просто аудио + субтитр -->
-    <section class="card hidden" id="step2">
+    <!-- <section class="card" id="step2">
       <div class="bubble"><b>Héros:</b> Bonjour !</div>
       <audio id="a2" src="../audio/hero_bonjour.mp3" controls></audio>
       <div class="row">
-        <button onclick="next('step2','step3')">Suivant</button>
-      </div>
-    </section>
-
-    <!-- 3. Мини-игра «соедини слово и картинку» в самом простом виде -->
-    <section class="card hidden" id="step3">
-      <h2>Couleurs</h2>
-      <div class="grid">
-        <img data-key="rouge" src="../img/red.png" class="pick">
-        <img data-key="bleu"  src="../img/blue.png" class="pick">
-      </div>
-      <div class="choices">
-        <button class="choice" data-key="rouge">rouge</button>
-        <button class="choice" data-key="bleu">bleu</button>
-      </div>
-      <p id="result" class="mute"></p>
-      <div class="row">
-        <button onclick="next('step3','step4')">Suivant</button>
-      </div>
-    </section>
-
-    <!-- 4. Видео (по желанию, можно пропустить) -->
-    <section class="card hidden" id="step4">
-      <video controls width="100%" poster="../img/intro.jpg">
-        <source src="../video/intro.mp4" type="video/mp4">
-      </video>
-      <div class="row">
         <a href="../index.html">Terminer</a>
       </div>
-    </section>
+    </section> -->
+
   </main>
 
   <script src="../js/app.js"></script>
