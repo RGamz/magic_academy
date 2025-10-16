@@ -1,6 +1,22 @@
-body{font-family:system-ui, sans-serif;margin:0;background:#f6f7fb;color:#111}
-.wrap{max-width:720px;margin:0 auto;padding:16px}
-.card{background:#fff;border-radius:12px;padding:16px;margin:12px 0;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+body {
+    font-family:system-ui, 
+    sans-serif;
+    margin:0;
+    background:#f6f7fb;
+    color:#111
+}
+.wrap {
+    max-width:100%;
+    margin:0 auto;
+    padding:16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.main_image{
+    padding: 10px;
+    width: 60%;
+}
 .hidden{display:none}
 .w100{width:100%;height:100%;border-radius:8px}
 .row{display:flex;gap:12px;margin-top:12px}
@@ -10,3 +26,7 @@ body{font-family:system-ui, sans-serif;margin:0;background:#f6f7fb;color:#111}
 .pick:active{transform:scale(.98)}
 .choice{padding:10px 14px;border-radius:8px;border:1px solid #ddd;background:#fafafa;cursor:pointer}
 .mute{color:#666}
+.side_page{width: 30%;}
+p{
+    margin: 0px;
+}
