@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "lesson_1_A",
+    "title": "Page 4 — Les présentations",
+    "description": "Écoute et répète: Bonjour, je m’appelle...",
+    "href": "./lessons/lesson_1.html",
+    "cover": "./img/book1_ch1_img1.png",
+    "tag": "Débutant"
+  },
+  {
+    "slug": "lesson_1_B",
+    "title": "Page 5 — Les présentations",
+    "description": "Écoute et montre, chante",
+    "href": "./lessons/lesson_2.html",
+    "cover": "./img/book1_ch1_img2.jpg",
+    "tag": "Débutant"
+  }
+]
