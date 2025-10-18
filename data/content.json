@@ -4,14 +4,28 @@
       "slug": "lesson_1",
       "title": "Page 4 — Les présentations",
       "description": "Écoute et répète: Bonjour, je m’appelle...",
-      "cover": "./img/book1_ch1_img1.png",
+      "cover": "./img/book1_unit1_lesson1_img1.png",
       "tag": "Débutant"
     },
     {
       "slug": "lesson_2",
       "title": "Page 5 — La famille",
       "description": "Qui est-ce ?",
-      "cover": "./img/book1_ch1_img2.jpg",
+      "cover": "./img/book1_unit1_lesson1_img2.jpg",
+      "tag": "Débutant"
+    },
+    {
+      "slug": "lesson_3",
+      "title": "Page 6 — Il y a combien de doigts?",
+      "description": "Presentation de nombres",
+      "cover": "./img/book1_unit1_lesson2_img1.jpg",
+      "tag": "Débutant"
+    },
+    {
+      "slug": "lesson_4",
+      "title": "Page 6 — Chanson '1,2,3'",
+      "description": "Chanson à apprendre!",
+      "cover": "./img/book1_unit1_lesson2_img2.jpg",
       "tag": "Débutant"
     }
   ],
@@ -19,7 +33,7 @@
     "lesson_1": {
       "title": "Jour 1 — Académie",
       "breadcrumb": ["Accueil", "Page 1"],
-      "mainImage": "../img/book1_ch1_img1.png",
+      "mainImage": "../img/book1_unit1_lesson1_img1.png",
       "tasks": [
         {
           "title": "Задача 1: Прослушать и показать пальцем на каждого члена семьи",
@@ -49,7 +63,7 @@
     "lesson_2": {
       "title": "Jour 1 — La famille",
       "breadcrumb": ["Accueil", "Page 2"],
-      "mainImage": "../img/book1_ch1_img2.jpg",
+      "mainImage": "../img/book1_unit1_lesson1_img2.jpg",
       "tasks": [
         { 
             "title": "<b>Задача 1:</b> Прослушать и показать пальцем на соответствующую картинку</span>", 
@@ -74,6 +88,74 @@
                 "Je te dis 'au revoir'",
                 "Tu me dis 'au revoir'",
                 "On se dit 'au revoir et à bientôt'"
+                ] 
+            }
+      ]
+    },
+    "lesson_3": {
+      "title": "Jour 2 — Nombres",
+      "breadcrumb": ["Accueil", "Page 6"],
+      "mainImage": "../img/book1_unit1_lesson2_img1.jpg",
+      "tasks": [
+        { 
+            "title": "<b>Задача 1:</b> Прослушать и повторять цифры жестами, как на картинке.</span>", 
+            "audio": "../audio/b1_ch1_audio7.mp3", 
+            "lines": [
+                "Il y a combien de doigts?",
+                "0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10"
+                ] 
+            }
+      ]
+    },
+    "lesson_4": {
+      "title": "Jour 2 — Nombres",
+      "breadcrumb": ["Accueil", "Page 6"],
+      "mainImage": "../img/book1_unit1_lesson2_img2.jpg",
+      "tasks": [
+        { 
+            "title": "<b>Задача 1:</b> Прослушать, спеть и выучить песню.</span>", 
+            "audio": "../audio/b1_ch1_audio8.mp3", 
+            "lines": [
+                "1, 2, 3, je vais dans les bois",
+                "1, 2, 3, je vais dans les bois",
+                "4, 5, ó, cueillir des cerises",
+                "4, 5, ó, cueillir des cerises",
+                "7, 8, 9, dans mon panier neuf",
+                "7, 8, 9, dans mon panier neuf",
+                "10, 11, 12, elles seront toutes rouges",
+                "10, 11, 12, elles seront toutes rouges"
+                ] 
+            },
+            {
+              "title": "<b>Задача 2:</b>Повторять движения согласно описанию ниже в процессе пения.</span>", 
+              "audio": "../audio/b1_ch1_audio8.mp3", 
+              "lines": [
+                  "1, 2, 3, je vais dans les bois",
+                  "1. Считать на пальцах по-французски до 3, затем изобразить ходьбу на месте.",
+                  "4, 5, 6, cueillir des cerises",
+                  "2. Считать на пальцах по-французски до 6, затем изобразить движение сбора вишен среди деревьев.",
+                  "7, 8, 9, dans mon panier neuf",
+                  "3. Считать на пальцах по-французски до 9, затем изобразить ношение корзинки.",
+                  "10, 11, 12, elles seront toutes rouges",
+                  "4. Считать на пальцах по-французски до 12, затем показать красный цвет на заранее подготовленной карточке или предмете."
+                  ]
+            },
+            { 
+            "title": "<b>Задача 3:</b> Научиться писать цифры</span>", 
+            "lines": [
+                "0 - zéro",
+                "1 - un",
+                "2 - deux",
+                "3 - trois",
+                "4 - quatre",
+                "5 - cinq",
+                "6 - six",
+                "7 - sept",
+                "8 - huit",
+                "9 - neuf",
+                "10 - dix",
+                "11 - onze",
+                "12 - douze"
                 ] 
             }
       ]
