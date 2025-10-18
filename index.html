@@ -38,50 +38,45 @@
   </footer> -->
 
     <script src="./js/app.js"></script>
-  <script>
-    const cards = document.getElementById('cards');
+    <script>
+      const cards = document.getElementById('cards');
 
-    function renderPages(pages){
-      cards.innerHTML = pages.map(p => `
-        <article class="card" role="listitem">
-          <a class="card-link" href="${p.href}">
-            <div class="card-media">
-              <img src="${p.cover}" alt="">
-              <span class="pill">${p.tag || ''}</span>
-            </div>
-            <div class="card-body">
-              <h4>${p.title}</h4>
-              <p class="muted">${p.description || ''}</p>
-            </div>
-          </a>
+      function renderPages(content){
+        cards.innerHTML = (content.pages || []).map(p => `
+          <article class="card" role="listitem">
+            <a class="card-link" href="./lessons/lesson.html?id=${encodeURIComponent(p.slug)}">
+              <div class="card-media">
+                <img src="${p.cover}" alt="">
+                ${p.tag ? `<span class="pill">${p.tag}</span>` : ``}
+              </div>
+              <div class="card-body">
+                <h4>${p.title}</h4>
+                <p class="muted">${p.description || ''}</p>
+              </div>
+            </a>
+          </article>
+        `).join('');
+      }
+
+      // skeleton на время загрузки
+      cards.innerHTML = Array.from({length: 3}).map(() => `
+        <article class="card skeleton">
+          <div class="card-media"></div>
+          <div class="card-body"><h4 class="skeleton-line"></h4><p class="skeleton-line short"></p></div>
         </article>
       `).join('');
-    }
 
-    // скелетон-плейсхолдеры на время загрузки
-    cards.innerHTML = Array.from({length: 3}).map(() => `
-      <article class="card skeleton">
-        <div class="card-media"></div>
-        <div class="card-body">
-          <h4 class="skeleton-line"></h4>
-          <p class="skeleton-line short"></p>
-        </div>
-      </article>
-    `).join('');
-
-    fetch('./data/pages.json', {cache: 'no-store'})
-      .then(r => r.json())
-      .then(renderPages)
-      .catch(() => {
-        cards.innerHTML = `
-          <div class="card">
-            <div class="card-body">
+      fetch('./data/content.json', {cache: 'no-store'})
+        .then(r => r.json())
+        .then(renderPages)
+        .catch(() => {
+          cards.innerHTML = `
+            <div class="card"><div class="card-body">
               <h4>Impossible de charger la liste</h4>
-              <p class="muted">Проверьте <code>data/pages.json</code> и запустите локальный сервер (например, <code>npx serve</code>).</p>
-            </div>
-          </div>
-        `;
-      });
-  </script>
+              <p class="muted">Проверь <code>data/content.json</code> и пути.</p>
+            </div></div>`;
+        });
+    </script>
+
 </body>
 </html>

@@ -1,0 +1,82 @@
+{
+  "pages": [
+    {
+      "slug": "lesson_1",
+      "title": "Page 4 — Les présentations",
+      "description": "Écoute et répète: Bonjour, je m’appelle...",
+      "cover": "./img/book1_ch1_img1.png",
+      "tag": "Débutant"
+    },
+    {
+      "slug": "lesson_2",
+      "title": "Page 5 — La famille",
+      "description": "Qui est-ce ?",
+      "cover": "./img/book1_ch1_img2.jpg",
+      "tag": "Débutant"
+    }
+  ],
+  "lessons": {
+    "lesson_1": {
+      "title": "Jour 1 — Académie",
+      "breadcrumb": ["Accueil", "Page 1"],
+      "mainImage": "../img/book1_ch1_img1.png",
+      "tasks": [
+        {
+          "title": "Задача 1: Прослушать и показать пальцем на каждого члена семьи",
+          "audio": "../audio/b1_ch1_audio1.mp3",
+          "lines": [
+            "Bonjour, je m'appelle Luc Legrand.",
+            "Bonjour, moi, c'est Jeanne Legrand.",
+            "Salut, moi, c'est Alice.",
+            "Moi, c'est Maggie.",
+            "Salut, moi, c'est Léo."
+          ]
+        },
+        {
+          "title": "Задача 2: Прослушать и ответить согласно примеру",
+          "audio": "../audio/b1_ch1_audio3.mp3",
+          "lines": [
+            "<i>Exemple:</i> Bonjour, moi, c'est monsieur Legrand.",
+            "Bonjour, monsieur Legrand.",
+            "Salut, moi, c'est Alice.",
+            "Bonjour, moi, c'est madame Legrand.",
+            "Moi, c'est Maggie.",
+            "Moi, c'est Léo. Et toi?"
+          ]
+        }
+      ]
+    },
+    "lesson_2": {
+      "title": "Jour 1 — La famille",
+      "breadcrumb": ["Accueil", "Page 2"],
+      "mainImage": "../img/book1_ch1_img2.jpg",
+      "tasks": [
+        { 
+            "title": "<b>Задача 1:</b> Прослушать и показать пальцем на соответствующую картинку</span>", 
+            "audio": "../audio/b1_ch1_audio4.mp3", 
+            "lines": [
+                "- Salut, Marie, ça va?",
+                "- Oui, ça va bien.",
+                "- Bonjour, Philippe!",
+                "- Bonjour, Luc!",
+                "- Bonjour, monsieur Dupuis!",
+                "- Bonjour, madame Legrand.",
+                "- Bonjour, madame!"
+                ] 
+            },
+            { 
+            "title": "<b>Задача 2:</b> Прослушать и спеть песенку 1 2 3</span>", 
+            "audio": "../audio/b1_ch1_123.m4a", 
+            "lines": [
+                "Je te dis 'bonjour'.",
+                "Tu me dis 'bonjour'.",
+                "On se dit 'bonjour et bonne journée'",
+                "Je te dis 'au revoir'",
+                "Tu me dis 'au revoir'",
+                "On se dit 'au revoir et à bientôt'"
+                ] 
+            }
+      ]
+    }
+  }
+}
