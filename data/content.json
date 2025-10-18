@@ -37,7 +37,7 @@
       "tasks": [
         {
           "title": "Задача 1: Прослушать и показать пальцем на каждого члена семьи",
-          "audio": "../audio/b1_ch1_audio1.mp3",
+          "audio": "../audio/b1_ch1_audio_1.mp3",
           "lines": [
             "Bonjour, je m'appelle Luc Legrand.",
             "Bonjour, moi, c'est Jeanne Legrand.",
@@ -48,7 +48,7 @@
         },
         {
           "title": "Задача 2: Прослушать и ответить согласно примеру",
-          "audio": "../audio/b1_ch1_audio3.mp3",
+          "audio": "../audio/b1_ch1_audio_3.mp3",
           "lines": [
             "<i>Exemple:</i> Bonjour, moi, c'est monsieur Legrand.",
             "Bonjour, monsieur Legrand.",
@@ -67,7 +67,7 @@
       "tasks": [
         { 
             "title": "<b>Задача 1:</b> Прослушать и показать пальцем на соответствующую картинку</span>", 
-            "audio": "../audio/b1_ch1_audio4.mp3", 
+            "audio": "../audio/b1_ch1_audio_4.mp3", 
             "lines": [
                 "- Salut, Marie, ça va?",
                 "- Oui, ça va bien.",
@@ -80,7 +80,7 @@
             },
             { 
             "title": "<b>Задача 2:</b> Прослушать и спеть песенку 1 2 3</span>", 
-            "audio": "../audio/b1_ch1_123.m4a", 
+            "audio": "../audio/b1_ch1_audio_5.mp3", 
             "lines": [
                 "Je te dis 'bonjour'.",
                 "Tu me dis 'bonjour'.",
@@ -99,7 +99,7 @@
       "tasks": [
         { 
             "title": "<b>Задача 1:</b> Прослушать и повторять цифры жестами, как на картинке.</span>", 
-            "audio": "../audio/b1_ch1_audio7.mp3", 
+            "audio": "../audio/b1_ch1_audio_7.mp3", 
             "lines": [
                 "Il y a combien de doigts?",
                 "0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10"
@@ -114,7 +114,7 @@
       "tasks": [
         { 
             "title": "<b>Задача 1:</b> Прослушать, спеть и выучить песню.</span>", 
-            "audio": "../audio/b1_ch1_audio8.mp3", 
+            "audio": "../audio/b1_ch1_audio_8.mp3", 
             "lines": [
                 "1, 2, 3, je vais dans les bois",
                 "1, 2, 3, je vais dans les bois",
@@ -128,7 +128,7 @@
             },
             {
               "title": "<b>Задача 2:</b>Повторять движения согласно описанию ниже в процессе пения.</span>", 
-              "audio": "../audio/b1_ch1_audio8.mp3", 
+              "audio": "../audio/b1_ch1_audio_8.mp3", 
               "lines": [
                   "1, 2, 3, je vais dans les bois",
                   "1. Считать на пальцах по-французски до 3, затем изобразить ходьбу на месте.",
