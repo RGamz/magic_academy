@@ -152,6 +152,31 @@
             event.target.classList.remove('hoverOver');
             }
         });
+
+        interact('.dragElement').draggable({
+            listeners: {
+                start (event) {
+                const t = event.target;
+                t.classList.add('beingDragged');     // enables cheaper CSS above
+                // optional: keep it on top while moving (avoids overlap paints)
+                t.style.zIndex = 1000;
+                },
+                move (event) {
+                const target = event.target;
+                const x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx;
+                const y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+                target.style.transform = `translate3d(${x}px, ${y}px, 0)`;  // 3d -> GPU
+                target.setAttribute('data-x', x);
+                target.setAttribute('data-y', y);
+                },
+                end (event) {
+                const t = event.target;
+                t.classList.remove('beingDragged');  // restore visuals after drop
+                t.style.zIndex = '';                 // reset stacking
+                }
+            }
+            });
+
     </script>
 
     </body>

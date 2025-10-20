@@ -1,104 +1,158 @@
-/* основной контейнер */
+/* ========= Base / Defaults ========= */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+:root{
+  /* layout */
+  --container-w: 90%;
+  --container-max: 1200px;
+  --container-h: 100%;
+
+  /* cards */
+  --card-w: 50%;
+  --card-h: 4rem;          /* fixed height for consistent layout (no conflicting flex+max-height) */
+  --card-radius: 12px;
+  --card-gap-col: 0.8rem;
+  --card-gap-row: 1%;
+
+  /* colors */
+  --text-dark: #111;
+
+  /* effects */
+  --drag-shadow: 0 2px 8px rgba(0,0,0,.12);
+}
+
+/* ========= Main container ========= */
 .game_container {
-    font-family: "Monaco", Monospace, sans-serif;
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    width: 90%;
-    max-width: 1200px;
-    height: 90vh; /* карточки растянутся по высоте контейнера */
-    gap: 1%;
-    background-image: linear-gradient(43deg, #495dbd 0%, #C850C0 46%, #FFCC70 100%);
-    padding-top: 1%;
-    padding-bottom: 3%;
+  font-family: "Monaco", Monospace, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: var(--container-w);
+  max-width: var(--container-max);
+  height: var(--container-h);         /* cards will stretch to container height distribution-wise */
+  gap: var(--card-gap-row);
+  background-image: linear-gradient(43deg, #495dbd 0%, #C850C0 46%, #FFCC70 100%);
+  padding: 1% 0 3%;
 }
 
-/* колонки */
-.left, .right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly; /* равномерное распределение по вертикали */
-    align-items: center;
-    gap: 2.5%;
+/* ========= Columns ========= */
+.left,
+.right {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;       /* evenly distribute vertically */
+  align-items: center;
+  gap: var(--card-gap-col);
 }
 
-/* карточки одинакового размера и поведения */
-.dragElement, .dropZone {
-    width: 50%;
-    flex: 1; /* чтобы заняли равные доли по высоте */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    text-align: center;
-    transition: 0.3s;
-    max-height: 5rem;
-    touch-action: none; 
-    user-select: none;
-    will-change: transform;          /* hint GPU */
-    transform: translateZ(0);        /* force compositing layer */
-    touch-action: none;               /* avoid scroll jank on touch */
-    user-select: none;
-}
-
-/* стили различий */
-.dragElement {
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(4px);
-}
-
-/* limit repaint scope during drag */
-.dragElement.beingDragged {
-  /* turn off heavy effects while moving */
-  backdrop-filter: none !important;         /* was blur(4px) */
-  -webkit-backdrop-filter: none !important;
-  box-shadow: 0 2px 8px rgba(0,0,0,.12) !important; /* lighter shadow */
-  cursor: grabbing;
-  height: 10rem;   /* temporary smaller paint area while moving */
-  width: 10rem;      /* or a fixed width if needed */
-}
-
+/* ========= Cards (shared) ========= */
+.dragElement,
 .dropZone {
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(6px);
+  width: var(--card-w);
+  height: var(--card-h);               /* fixed, avoids layout thrash while dragging */
+  flex: 0 0 var(--card-h);             /* prevent vertical stretching conflicts */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--card-radius);
+  text-align: center;
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+  /* Touch + selection hygiene */
+  touch-action: none;
+  user-select: none;
 }
 
-.dragElement h3 { margin: 0; color: #111; }
+/* ========= Draggable cards ========= */
+.dragElement {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(4px);
+}
 
-/* zones: avoid heavy inner shadows while pointer is moving over them */
+.dragElement h3 {
+  margin: 0;
+  color: var(--text-dark);
+}
+
+/* Performance: lighten visuals during drag */
+.dragElement.beingDragged {
+  /* Disable heavy filters while moving to keep 60fps */
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: var(--drag-shadow) !important;
+  cursor: grabbing;
+  /* Create a compositor layer only while dragging */
+  will-change: transform;
+  transform: translateZ(0);
+  z-index: 10;
+}
+
+/* ========= Drop zones ========= */
+.dropZone {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  display: flex;                    /* already true in your code */
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;                 /* avoid corner bleed */
+}
+
+/* Reduce heavy visuals on hover state */
 .dropZone.hoverOver {
-  /* keep border highlight but avoid heavy shadows/filters */
   box-shadow: none !important;
 }
 
-.noir {
-    background-color: black;
+/* Optional success styling (if you add a 'filled' class in JS) */
+.dropZone.filled {
+  border: 2px solid #228B22;
+  overflow: hidden; /* avoids corner bleed when a child fills the zone */
 }
-.blanc {
-    background-color: white;
+
+
+.dropZone > .dragElement {
+  flex: 1 1 auto !important;        /* override flex-basis: 5rem */
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: inherit;           /* match zone’s rounded corners */
+  transform: none !important;       /* clear any translate from dragging */
 }
-.rouge {
-    background-color: red;
+
+
+/* ========= Color backgrounds ========= */
+.noir   { background-color: #000; }
+.blanc  { background-color: #fff; }
+.rouge  { background-color: red; }
+.vert   { background-color: green; }
+.jaune  { background-color: yellow; }
+.orange { background-color: rgb(255, 123, 0); }
+.rose   { background-color: rgb(255, 52, 255); }
+.gris   { background-color: rgb(187, 187, 187); }
+.bleu   { background-color: blue; }
+.violet { background-color: rgb(153, 0, 255); }
+
+/* ========= Reduced motion ========= */
+@media (prefers-reduced-motion: reduce) {
+  .dragElement,
+  .dropZone {
+    transition: none;
+  }
 }
-.vert {
-    background-color: green;
-}
-.jaune {
-    background-color: yellow;
-}
-.orange {
-    background-color: rgb(255, 123, 0);
-}
-.rose {
-    background-color: rgb(255, 52, 255);
-}
-.gris {
-    background-color: rgb(187, 187, 187);
-}
-.bleu {
-    background-color: blue;
-}
-.violet {
-    background-color: rgb(153, 0, 255);
+
+/* ========= Small screens ========= */
+@media (max-width: 800px) {
+  :root{
+    --card-w: 70%;
+    --card-h: 4.25rem;
+  }
+
+  .game_container {
+    height: 100%;             /* let content size naturally on mobile */
+  }
+
+  .left,
+  .right {
+    gap: 0.5rem;
+  }
 }
