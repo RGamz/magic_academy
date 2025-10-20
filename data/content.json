@@ -27,6 +27,27 @@
       "description": "Chanson à apprendre!",
       "cover": "./img/book1_unit1_lesson2_img2.jpg",
       "tag": "Débutant"
+    },
+    {
+      "slug": "lesson_5",
+      "title": "Page 7 — Comment tu t'appelles?",
+      "description": "Salutations et age",
+      "cover": "./img/book1_unit1_lesson3_img1.jpg",
+      "tag": "Débutant"
+    },
+    {
+      "slug": "lesson_6",
+      "title": "Page 8 — Ma toupie",
+      "description": "Chanson à apprendre!",
+      "cover": "./img/book1_unit1_lesson4_img1.jpg",
+      "tag": "Débutant"
+    },
+    {
+      "slug": "lesson_7",
+      "title": "Page 8 — Figures géométriques",
+      "description": "Les couleurs",
+      "cover": "./img/book1_unit1_lesson4_img2.jpg",
+      "tag": "Débutant"
     }
   ],
   "lessons": {
@@ -114,7 +135,7 @@
       "tasks": [
         { 
             "title": "<b>Задача 1:</b> Прослушать, спеть и выучить песню.</span>", 
-            "audio": "../audio/b1_ch1_audio_8.mp3", 
+            "audio": "../audio/b1_ch1_audio_9.mp3", 
             "lines": [
                 "1, 2, 3, je vais dans les bois",
                 "1, 2, 3, je vais dans les bois",
@@ -128,7 +149,7 @@
             },
             {
               "title": "<b>Задача 2:</b>Повторять движения согласно описанию ниже в процессе пения.</span>", 
-              "audio": "../audio/b1_ch1_audio_8.mp3", 
+              "audio": "../audio/b1_ch1_audio_9.mp3", 
               "lines": [
                   "1, 2, 3, je vais dans les bois",
                   "1. Считать на пальцах по-французски до 3, затем изобразить ходьбу на месте.",
@@ -156,6 +177,118 @@
                 "10 - dix",
                 "11 - onze",
                 "12 - douze"
+                ] 
+            }
+      ]
+    },
+    "lesson_5": {
+      "title": "Comment tu t'appelles?",
+      "breadcrumb": ["Accueil", "Page 7"],
+      "mainImage": "../img/book1_unit1_lesson3_img1.jpg",
+      "tasks": [
+        { 
+            "title": "<b>Задача 1:</b> Прослушать и повторить и выучить незнакомые слова.</span>", 
+            "audio": "../audio/b1_ch1_audio_11.mp3", 
+            "lines": [
+                "ALICE: Bonjour, Marie.",
+                "MARIE: Salut, Alice. Bonjour! Comment tu t'appelles?",
+                "LEO: .Je m'appeIIe Léo.",
+                "MARIE:Tu as quel âge?",
+                "LEO: J'ai 7 ans. Et toi?",
+                "MARIE: .J'ai 8 ans",
+                "LEO: Elle, elle s'appelle Maggie. Elle a 3 ans.",
+                "MARIE: Bonjour, Maggie.",
+                "MAGGIE : Je te dis bonjour..."
+                ] 
+            },
+            { 
+            "title": "<b>Задача 2:</b> Прочитать диалог вслух.</span>", 
+            "lines": [
+                "ALICE: Bonjour, Marie.",
+                "MARIE: Salut, Alice. Bonjour! Comment tu t'appelles?",
+                "LEO: .Je m'appeIIe Léo.",
+                "MARIE:Tu as quel âge?",
+                "LEO: J'ai 7 ans. Et toi?",
+                "MARIE: .J'ai 8 ans",
+                "LEO: Elle, elle s'appelle Maggie. Elle a 3 ans.",
+                "MARIE: Bonjour, Maggie.",
+                "MAGGIE : Je te dis bonjour..."
+                ] 
+            },
+            { 
+            "title": "<b>Задача 3:</b> Прослушать и ответить на вопросы.</span>", 
+            "audio": "../audio/b1_ch1_audio_12.mp3", 
+            "lines": [
+                "Elle s'appelle Maggie. Elle a quel âge ? 3 ans ? 4 ans?", 
+                "Il s'appelle Léo. Il a quel âge ? 6 ans ? 7 ans?",
+                "Elle s'appelle Marie. Elle a quel âge ? 8 ans ? 9 ans ?", 
+                "Elle a 9 ans. Comment elle s'appelle ? Marie ?  Alice?"
+                ] 
+            },
+            { 
+            "title": "<b>Задача 4:</b> Написать, как тебя зовут и сколько тебе лет.</span>", 
+            "lines": [
+                "Bonjour, je m'appelle ...",
+                "J'ai ... ans."
+                ] 
+            }
+      ]
+    },
+    "lesson_6": {
+      "title": "De quelles couleurs est la toupie?",
+      "breadcrumb": ["Accueil", "Page 8"],
+      "mainImage": "../img/book1_unit1_lesson4_img1.jpg",
+      "tasks": [
+        { 
+            "title": "<b>Задача 1:</b> Прослушать и показать цвета</span>", 
+            "audio": "../audio/b1_ch1_audio_13.mp3", 
+            "lines": [
+                "1. Bleu,jaune, vert",
+                "2. Bleu, rouge, violet",
+                "3. Jaune, rouge, orange",
+                "4. Vert",
+                "5. Violet",
+                "1 ó. Orange"
+                ] 
+            },
+        { 
+            "title": "<b>Задача 2:</b> Прослушать, спеть и выучить песню.</span>", 
+            "audio": "../audio/b1_ch1_audio_14.mp3", 
+            "lines": [
+                "Bleu, jaune, vert ma toupie.",
+                "Elle tourne, elle tourne,",  
+                "Bleu, jaune, vert ma toupie.",  
+                "Elle tourne. C’est très joli.",  
+
+                "Bleu, rouge, violet ma toupie.",  
+                "Elle tourne, elle tourne,",  
+                "Bleu, rouge, violet ma toupie.",  
+                "Elle tourne. C’est très joli.",  
+
+                "Jaune, rouge, orange ma toupie.",  
+                "Elle tourne, elle tourne,",  
+                "Jaune, rouge, orange ma toupie.",  
+                "Elle tourne, elle tourne. Elle tourne et c’est fini."
+                ] 
+            }
+      ]
+    },
+    "lesson_7": {
+      "title": "Figures géométriques et couleurs",
+      "breadcrumb": ["Accueil", "Page 8"],
+      "mainImage": "../img/book1_unit1_lesson4_img2.jpg",
+      "tasks": [
+        { 
+            "title": "<b>Задача 1:</b> Прослушать и ответить.</span>", 
+            "audio": "../audio/b1_ch1_audio_16.mp3", 
+            "lines": [
+                "De quelle couleur est le triangle numéro 3 ? Bleu, orange ou jaune ?",  
+                "De quelle couleur est le rond numéro 4 ? Vert, blanc ou rouge ?",  
+                "De quelle couleur est le carré numéro 1 ? Rouge, jaune ou bleu ?",  
+                "De quelle couleur est le triangle numéro 2 ? Blanc, orange ou jaune ?",  
+                "De quelle couleur est le rectangle numéro 5 ? Jaune, rouge ou violet ?",  
+                "De quelle couleur est le rond numéro 6 ? Jaune, rouge ou bleu ?",  
+                "De quelle couleur est le rectangle numéro 8 ? Rouge, jaune ou noir ?"
                 ] 
             }
       ]
