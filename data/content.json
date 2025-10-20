@@ -290,6 +290,9 @@
                 "De quelle couleur est le rond numéro 6 ? Jaune, rouge ou bleu ?",  
                 "De quelle couleur est le rectangle numéro 8 ? Rouge, jaune ou noir ?"
                 ] 
+            },
+            {
+            "title": "<b>Задача 2:</b> Поиграть в игру 'Соедини цвета'!</span>"
             }
       ]
     }

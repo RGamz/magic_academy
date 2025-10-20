@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/color_game_styles.css">
+    </head>
+
+    <body>
+        <a class="skip-link" href="#main">Aller au contenu</a>
+
+        <header class="site-header">
+            <div class="container">
+            <h1 class="brand">L’Académie des Mots Magiques</h1>
+            <nav class="site-nav" aria-label="Navigation principale">
+                <a href="../index.html" aria-current="page">Accueil</a>
+                <a href="" aria-current="page">Jeux</a>
+            </nav>
+            </div>
+        </header>
+
+        <section class="game_section">
+            <div class="game_container">
+                <div class="left">
+                    <div class="dragElement" id="noir" draggable="true"><h3>Noir</h3></div>
+                    <div class="dragElement" id="blanc" draggable="true"><h3>Blanc</h3></div>
+                    <div class="dragElement" id="rouge" draggable="true"><h3>Rouge</h3></div>
+                    <div class="dragElement" id="vert" draggable="true"><h3>Vert</h3></div>
+                    <div class="dragElement" id="jaune" draggable="true"><h3>Jaune</h3></div>
+                    <div class="dragElement" id="orange" draggable="true"><h3>Orange</h3></div>
+                    <div class="dragElement" id="rose" draggable="true"><h3>Rose</h3></div>
+                    <div class="dragElement" id="gris" draggable="true"><h3>Gris</h3></div>
+                    <div class="dragElement" id="bleu" draggable="true"><h3>Bleu</h3></div>
+                    <div class="dragElement" id="violet" draggable="true"><h3>Violet</h3></div>
+                </div>
+
+                <div class="right">
+                    <div class="dropZone noir"></div>
+                    <div class="dropZone blanc"></div>
+                    <div class="dropZone rouge"></div>
+                    <div class="dropZone vert"></div>
+                    <div class="dropZone jaune"></div>
+                    <div class="dropZone orange"></div>
+                    <div class="dropZone rose"></div>
+                    <div class="dropZone gris"></div>
+                    <div class="dropZone bleu"></div>
+                    <div class="dropZone violet"></div>
+                </div>
+            </div>
+        </section>
+        
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+
+    <script>
+
+         // Select the container that holds all draggable elements
+        const leftContainer = document.querySelector('.left');
+
+        // Get all draggable elements as an array
+        const draggablesArray = Array.from(leftContainer.children);
+
+        // Fisher–Yates shuffle algorithm
+        for (let i = draggablesArray.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [draggablesArray[i], draggablesArray[j]] = [draggablesArray[j], draggablesArray[i]];
+        }
+
+        // Re-append shuffled elements back into the container
+        draggablesArray.forEach(el => leftContainer.appendChild(el));
+
+        // cache references for later use
+        const draggables = document.querySelectorAll('.dragElement');
+        const dropZones  = document.querySelectorAll('.dropZone');
+
+        // helper: lock a card inside a dropzone after a correct drop
+        function lockInto(zone, card) {
+            zone.appendChild(card);                         // move into zone (disappears from left list)
+            card.style.transform = 'none';                  // reset any dragging translation
+            card.removeAttribute('data-x');                 // clear stored offsets
+            card.removeAttribute('data-y');
+            card.setAttribute('draggable', 'false');        // prevent native DnD
+            card.style.width = '100%';                      // fill the zone fully
+            card.style.height = '100%';
+            card.style.pointerEvents = 'none';              // ignore further pointer events
+            card.style.margin = 0;
+            card.style.background = 'rgba(255, 255, 255, 0.7)'; // slight visual change on success
+            zone.style.border = 'solid #228B22';            // success border on zone
+            zone.style.overflow = 'hidden';                 // hide rounded-corner bleed
+        }
+
+        // make .dragElement draggable (works on mouse + touch)
+        interact('.dragElement').draggable({
+            listeners: {
+            // update position on each move
+            move (event) {
+                const target = event.target;
+                const x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx; // accumulate delta x
+                const y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy; // accumulate delta y
+                target.style.transform = `translate(${x}px, ${y}px)`;                  // visually move
+                target.setAttribute('data-x', x);                                      // store new x
+                target.setAttribute('data-y', y);                                      // store new y
+            },
+            // small visual cue when dragging starts/ends
+            start (event) {
+                event.target.classList.add('beingDragged');                            // add dragging style
+            },
+            end (event) {
+                event.target.classList.remove('beingDragged');                         // remove dragging style
+            }
+            }
+        });
+
+        // make .dropZone accept drops
+        interact('.dropZone').dropzone({
+            accept: '.dragElement',          // only our cards
+            overlap: 0.25,                   // must overlap at least 25%
+
+            // highlight when a draggable enters the zone
+            ondragenter (event) {
+                event.target.classList.add('hoverOver'); // same CSS class you already use
+            },
+
+            // remove highlight when it leaves
+            ondragleave (event) {
+                event.target.classList.remove('hoverOver');
+            },
+
+            // handle the actual drop
+            ondrop (event) {
+            const zone   = event.target;            // the zone element
+            const card   = event.relatedTarget;     // the dragged .dragElement
+            const colorId = card.id;                // e.g. "rouge"
+            
+            // only allow one card per zone
+            if (zone.querySelector('.dragElement')) return;
+
+            // allow drop only if zone has matching color class (e.g., .rouge)
+            if (!zone.classList.contains(colorId)) {
+                // brief "wrong" feedback
+                card.style.backgroundColor = 'red';
+                setTimeout(() => { card.style.backgroundColor = 'rgba(255, 255, 255, 0.9)'; }, 120);
+                return; // do not lock in
+            }
+
+            // correct drop → lock the card into the zone
+            lockInto(zone, card);
+            },
+
+            // cleanup highlight after drop completes
+            ondropdeactivate (event) {
+            event.target.classList.remove('hoverOver');
+            }
+        });
+    </script>
+
+    </body>
+</html>
