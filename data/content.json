@@ -55,6 +55,20 @@
       "description": "Les activités",
       "cover": "./img/book1_unit1_lesson5_img1.jpg",
       "tag": "Débutant"
+    },
+    {
+      "slug": "lesson_9",
+      "title": "Page 9 — Qu'est-ce qu'il fait? Exercise de cahier",
+      "description": "Exercise de cahier",
+      "cover": "./img/book1_unit1_lesson5_C_img1.jpg",
+      "tag": "Débutant"
+    },
+    {
+      "slug": "lesson_10",
+      "title": "Page 10 — La peinture preferée de Léo",
+      "description": "La peinture preferée de Léo",
+      "cover": "./img/book1_unit1_petitdoc_peinture.jpg",
+      "tag": "Débutant"
     }
   ],
   "lessons": {
@@ -369,6 +383,74 @@
                 "Ответы",
                 "1. Il peint. - 2. Il court. - 3. Elle chante. - 4. Elle téléphone.",
                 "5. Elle apprend l'anglais. - 6. Elle saute."
+                ] 
+            }
+      ]
+    },
+    "lesson_9": {
+      "title": "Qu'est-ce qu'il fait? Exercise de cahier",
+      "breadcrumb": ["Accueil", "Page 9"],
+      "mainImage": "../img/book1_unit1_lesson5_C_img1.jpg",
+      "tasks": [
+        { 
+            "title": "<b>Задача 1:</b> Прослушать (écoute) и найти персонажей (et cherche les personnages).</span>", 
+            "audio": "../audio/b1_ch1_cah_audio_38.mp3", 
+            "lines": [
+                "Léo court sur le tapis de son père.",  
+                "Maggie peint le chien.",  
+                "Luc Legrand apprend l’espagnol.",  
+                "Marie chante.",  
+                "Alice saute.",  
+                "Jeanne Legrand téléphone."
+                ] 
+            }
+      ]
+    },
+    "lesson_10": {
+      "title": "La peinture preferée de Léo",
+      "breadcrumb": ["Accueil", "Page 10"],
+      "mainImage": "../img/book1_unit1_petitdoc_peinture.jpg",
+      "tasks": [
+        {
+            "title": "<b>Цели урока:</b></span>",
+            "lines": [
+              "Познакомиться с французским художником и картиной:",
+              "<b>Robert Delaunais, Tour Eiffel</b>",
+
+              "Уметь отвечать на следующие вопросы письменно:",
+              "<b>'Qu'est-ce que c'est?', 'Comment s'appelle le peintre?'</b>",
+
+              "Уметь отвечать на следуюшие вопросы устно:",
+              "<b>'Comment s'appelle la peinture préférée de Léo?', 'll y a combien de triangles noirs?', 'De quelles couleurs est la tour Eiffel de Robert Delaunay ?'</b>"
+            ]
+            },
+        { 
+            "title": "<b>Задача 1:</b> Посмотреть (regarde) любимую картину Лео (la peinture preferée de Léo).</span>", 
+            "lines": [
+                "Q: Qu'est-ce que c'est?",  
+                "R: C'est une peinture qui s'appelle 'Tour Eiffel'",  
+                "Q: Comment s'appelle le peintre?",  
+                "R: Il s'appelle Robert Delaunay"
+                ] 
+            },
+            { 
+            "title": "<b>Задача 2:</b> Покажи (montre).</span>", 
+            "lines": [
+                "Un carré",  
+                "Un triangle",  
+                "Un rectangle"
+                ] 
+            },
+            { 
+            "title": "<b>Задача 3:</b> Послушай (écoute) и ответь (et réponds).</span>", 
+            "audio": "../audio/b1_ch1_audio_20.mp3", 
+            "lines": [
+                "Comment s’appelle la peinture préférée de Léo ?",  
+                "---Tour Eiffel",
+                "Il y a combien de triangles noirs ?",  
+                "---Un triangle noir",
+                "De quelles couleurs est la tour Eiffel de Robert Delaunay ?",
+                "---rouge, noir, jaune, vert, orange, violet"
                 ] 
             }
       ]
