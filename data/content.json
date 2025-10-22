@@ -69,6 +69,13 @@
       "description": "La peinture preferée de Léo",
       "cover": "./img/book1_unit1_petitdoc_peinture.jpg",
       "tag": "Débutant"
+    },
+    {
+      "slug": "lesson_11",
+      "title": "Page 11 — Le téléphone de Pedro",
+      "description": "Le téléphone de Pedro",
+      "cover": "./img/book1_unit1_projet1.jpg",
+      "tag": "Débutant"
     }
   ],
   "lessons": {
@@ -454,6 +461,61 @@
                 ] 
             }
       ]
+    },
+      "lesson_11": {
+      "title": "Le téléphone de Pedro",
+      "breadcrumb": ["Accueil", "Page 11"],
+      "mainImage": "../img/book1_unit1_projet1.jpg",
+      "tasks": [
+        {
+          "title": "<b>Цель урока:</b>",
+          "lines": [
+            "Научиться понимать короткий диалог по телефону на французском языке."
+          ]
+        },
+        {
+          "title": "<b>Задание 1:</b> Послушай (Écoute).",
+          "audio": "../audio/b1_ch1_audio_21.mp3",
+          "lines": [
+            "Послушай, как Педро и Иса разговаривают по телефону и повтори за ними.",
+            "<i>PEDRO : Allô ? C’est Pedro. Ça va ?<br>ISA : Oui, ça va et toi ?<br>PEDRO : Ça va bien. Qu’est-ce que tu fais ?<br>ISA : J’apprends le français.<br>PEDRO : Le français ? Ah, c’est super !<br>ISA : Oui, c’est super. Au revoir, Pedro.<br>PEDRO : Au revoir, Isa.</i>"
+          ]
+        },
+        {
+          "title": "<b>Задание 2:</b> Поиграй (Joue) — Сделай свой телефон.",
+          "lines": [
+            "Возьми лист бумаги и нарисуй телефон как на картинке.",
+            "Раскрась кнопки разными цветами:",
+            "<i>1 rouge, 2 jaune, 3 blanc, 4 violet, 5 vert, 6 orange, 7 vert, 8 violet, 9 bleu, 0 noir</i>.",
+            "Напиши своё имя и придумай свой номер телефона (не настоящий)."
+          ]
+        },
+        {
+          "title": "<b>Задание 3:</b> Позвони (Appelle).",
+          "lines": [
+            "Скажи вслух как Педро:",
+            "<i>Allô ? C’est [твоё имя]. Ça va ?</i>",
+            "Мама может ответить: <i>Oui, ça va et toi ?</i>",
+            "А ты скажи: <i>Ça va bien ! Au revoir !</i>",
+            "Повторите несколько раз, поменяв роли."
+          ]
+        },
+        {
+          "title": "<b>Проверь себя:</b>",
+          "lines": [
+            "Кто сказал «J’apprends le français»?",
+            "Что значит «Au revoir»?",
+            "Как Педро говорит «Привет» по телефону?"
+          ]
+        },
+        {
+          "title": "<b>Бонус:</b>",
+          "lines": [
+            "Сделай фото или нарисуй, как ты разговариваешь с Иса."
+          ]
+        }
+      ]
     }
+
   }
 }
