@@ -68,13 +68,27 @@
       "title": "Page 10 — La peinture preferée de Léo",
       "description": "La peinture preferée de Léo",
       "cover": "./img/book1_unit1_petitdoc_peinture.jpg",
-      "tag": "Débutant"
+      "tag": "Petit Doc"
     },
     {
       "slug": "lesson_11",
       "title": "Page 11 — Le téléphone de Pedro",
       "description": "Le téléphone de Pedro",
       "cover": "./img/book1_unit1_projet1.jpg",
+      "tag": "Projet"
+    },
+    {
+      "slug": "lesson_12a",
+      "title": "Page 13 — Qu’est-ce que c’est ? (Les objets de l’école)",
+      "description": "Écoute et montre: une trousse, un cartable, une gomme...",
+      "cover": "./img/book1_unit2_lesson1_img1.jpg",
+      "tag": "Débutant"
+    },
+    {
+      "slug": "lesson_12b",
+      "title": "Page 12 — Objets de l'école",
+      "description": "Écoute et montre sur la grande image",
+      "cover": "./img/book1_unit2_lesson1_img2.jpg",
       "tag": "Débutant"
     }
   ],
@@ -515,7 +529,97 @@
           ]
         }
       ]
+    },
+    "lesson_12a": {
+      "title": "Qu’est-ce que c’est ? — Les objets de l’école",
+      "breadcrumb": ["Accueil", "Page 13"],
+      "mainImage": "../img/book1_unit2_lesson1_img1.jpg",
+      "tasks": [
+        {
+          "title": "<b>Цель урока:</b>",
+          "lines": [
+            "Познакомиться с названиями школьных предметов по-французски.",
+            "Научиться задавать вопрос <b>“Qu’est-ce que c’est ?”</b> (Что это?).",
+            "Понимать фразы на слух и узнавать предмет по описанию."
+          ]
+        },
+        {
+          "title": "<b>Задание 1:</b> Послушай, что говорят, и покажи нужный предмет на картинке.",
+          "audio": "../audio/b1_ch2_audio_22.mp3",
+          "lines": [
+            "Qu’est-ce que c’est ?",  
+            "C’est une trousse. Montre la trousse.",  
+            "Qu’est-ce que c’est ?",  
+            "C’est un cartable. Montre le cartable.",  
+            "Qu’est-ce que c’est ?",  
+            "C’est une gomme. Montre la gomme.",  
+            "Qu’est-ce que c’est ?",  
+            "C’est un livre. Montre le livre.",  
+            "Qu’est-ce que c’est ?",  
+            "Ce sont des ciseaux. Montre les ciseaux.",  
+            "Qu’est-ce que c’est ?",  
+            "C’est un stylo. Montre le stylo.",  
+            "Qu’est-ce que c’est ?",  
+            "C’est une colle. Montre la colle.",  
+            "Qu’est-ce que c’est ?",  
+            "C’est une règle. Montre la règle."
+          ]
+        },
+        {
+          "title": "<b>Слова урока:</b>",
+          "lines": [
+            "une trousse — пенал",
+            "un cartable — портфель",
+            "des ciseaux — ножницы",
+            "une règle — линейка",
+            "une gomme — ластик",
+            "un livre — книга",
+            "un crayon — карандаш",
+            "un stylo — ручка"
+          ]
+        }
+      ]
+    },
+    "lesson_12b": {
+      "title": "Qu’est-ce que c’est ? — Les objets de l’école",
+      "breadcrumb": ["Accueil", "Page 12"],
+      "mainImage": "../img/book1_unit2_lesson1_img2.jpg",
+      "tasks": [
+        {
+          "title": "<b>Задание 1:</b> Послушай и покажи на картинке.",
+          "audio": "../audio/b1_ch2_audio_23.mp3",
+          "lines": [
+              "Les ciseaux d’Alice. Ils sont verts.",  
+              "La règle d’Alice. Elle est verte.",  
+              "Le cartable d’Alice. Il est blanc et bleu.",  
+              "La trousse d’Alice. Elle est violette.",  
+              "La colle d’Alice. Elle est rouge et blanche.",  
+              "La gomme d’Alice. Elle est rose et bleue.",  
+              "Le stylo d’Alice. Il est marron."
+          ]
+        },
+        {
+          "title": "<b>Задание 2:</b> Послушай Алису и назови слова, которые ты знаешь.",
+          "audio": "../audio/b1_ch2_audio_24.mp3",
+          "lines": [
+              "ALICE : Alors, mon stylo marron, ma gomme rose et bleue, mes ciseaux verts, ma colle rouge et blanche dans ma trousse violette. Ma trousse violette et mon livre dans mon cartable blanc et bleu. Et mes crayons de couleur ? Où sont mes crayons de couleur ?",  
+              "MAGGIE : Bleu, jaune, vert ma toupie, elle tourne, elle tourne...",  
+              "ALICE : Oh, Maggie ! Ce sont mes crayons de couleur !"
+          ]
+        },
+        {
+          "title": "<b>Задание 3:</b> Послушай и ответь.",
+          "audio": "../audio/b1_ch2_audio_25.mp3",
+          "lines": [
+              "Elle est rouge et blanche. Qu’est-ce que c’est ? La règle ou la colle ?",  
+              "Elle est violette. Qu’est-ce que c’est ? La règle ou la trousse ?",  
+              "Ils sont verts. Qu’est-ce que c’est ? Les ciseaux ou le stylo ?",  
+              "Il est blanc et bleu. Qu’est-ce que c’est ? Le cartable ou le stylo ?",  
+              "Elle est rose et bleue. Qu’est-ce que c’est ? La gomme ou la trousse ?",  
+              "Il est marron. Qu’est-ce que c’est ? Le cartable ou le stylo ?"
+          ]
+        }
+      ]
     }
-
   }
 }
