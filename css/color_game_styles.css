@@ -141,6 +141,9 @@
   cursor: pointer;
 }
 
+.speak-btn:hover { transform: scale(1.2); }
+.speak-btn:active { transform: scale(0.95); }
+
 /* ========= Reduced motion ========= */
 @media (prefers-reduced-motion: reduce) {
   .dragElement,

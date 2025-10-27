@@ -227,16 +227,29 @@
             }
             });
 
-            // play pronunciation when clicking the speaker
+            // --- Audio player for color pronunciations ---
+            const audioBasePath = '../audio/colors/'; // adjust path if needed
+            const audioCache = {}; // store loaded audio elements for reuse
+
             document.querySelectorAll('.speak-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.stopPropagation(); // prevent interfering with drag
-                const text = btn.closest('.dragElement').id; // "rouge", "vert" etc.
-                const utterance = new SpeechSynthesisUtterance(text);
-                utterance.lang = 'fr-FR'; // set language to French
-                speechSynthesis.speak(utterance);
+                const colorId = btn.closest('.dragElement').id;
+                const filePath = `${audioBasePath}${colorId}.mp3`;
+
+                // reuse cached audio if already created
+                let audio = audioCache[colorId];
+                if (!audio) {
+                    audio = new Audio(filePath);
+                    audioCache[colorId] = audio;
+                }
+
+                // rewind and play
+                audio.currentTime = 0;
+                audio.play().catch(err => console.warn('Audio play error:', err));
             });
             });
+
 
     </script>
 
