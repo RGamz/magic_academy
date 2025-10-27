@@ -132,6 +132,15 @@
 .bleu   { background-color: blue; }
 .violet { background-color: rgb(153, 0, 255); }
 
+
+.speak-btn {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  margin-left: .5rem;
+  cursor: pointer;
+}
+
 /* ========= Reduced motion ========= */
 @media (prefers-reduced-motion: reduce) {
   .dragElement,

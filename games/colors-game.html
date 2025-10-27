@@ -23,16 +23,66 @@
         <section class="game_section">
             <div class="game_container">
                 <div class="left">
-                    <div class="dragElement" id="noir" draggable="true"><h3>Noir</h3></div>
-                    <div class="dragElement" id="blanc" draggable="true"><h3>Blanc</h3></div>
-                    <div class="dragElement" id="rouge" draggable="true"><h3>Rouge</h3></div>
-                    <div class="dragElement" id="vert" draggable="true"><h3>Vert</h3></div>
-                    <div class="dragElement" id="jaune" draggable="true"><h3>Jaune</h3></div>
-                    <div class="dragElement" id="orange" draggable="true"><h3>Orange</h3></div>
-                    <div class="dragElement" id="rose" draggable="true"><h3>Rose</h3></div>
-                    <div class="dragElement" id="gris" draggable="true"><h3>Gris</h3></div>
-                    <div class="dragElement" id="bleu" draggable="true"><h3>Bleu</h3></div>
-                    <div class="dragElement" id="violet" draggable="true"><h3>Violet</h3></div>
+                    <div class="dragElement" id="noir" draggable="true">
+                        <h3>Noir</h3>
+                        <button class="speak-btn" aria-label="Play pronunciation">
+                            🔊
+                        </button>
+                    </div>
+                    <div class="dragElement" id="blanc" draggable="true">
+                        <h3>Blanc</h3>
+                        <button class="speak-btn" aria-label="Play pronunciation">
+                            🔊
+                        </button>
+                    </div>
+                    <div class="dragElement" id="rouge" draggable="true">
+                        <h3>Rouge</h3>
+                        <button class="speak-btn" aria-label="Play pronunciation">
+                            🔊
+                        </button>
+                    </div>
+                    <div class="dragElement" id="vert" draggable="true">
+                        <h3>Vert</h3>
+                        <button class="speak-btn" aria-label="Play pronunciation">
+                            🔊
+                        </button>
+                    </div>
+                    <div class="dragElement" id="jaune" draggable="true">
+                        <h3>Jaune</h3>
+                        <button class="speak-btn" aria-label="Play pronunciation">
+                            🔊
+                        </button>
+                    </div>
+                    <div class="dragElement" id="orange" draggable="true">
+                        <h3>Orange</h3>
+                        <button class="speak-btn" aria-label="Play pronunciation">
+                            🔊
+                        </button>
+                    </div>
+                    <div class="dragElement" id="rose" draggable="true">
+                        <h3>Rose</h3>
+                        <button class="speak-btn" aria-label="Play pronunciation">
+                            🔊
+                        </button>
+                    </div>
+                    <div class="dragElement" id="gris" draggable="true">
+                        <h3>Gris</h3>
+                        <button class="speak-btn" aria-label="Play pronunciation">
+                            🔊
+                        </button>
+                    </div>
+                    <div class="dragElement" id="bleu" draggable="true">
+                        <h3>Bleu</h3>
+                        <button class="speak-btn" aria-label="Play pronunciation">
+                            🔊
+                        </button>
+                    </div>
+                    <div class="dragElement" id="violet" draggable="true">
+                        <h3>Violet</h3>
+                        <button class="speak-btn" aria-label="Play pronunciation">
+                            🔊
+                        </button>
+                    </div>
                 </div>
 
                 <div class="right">
@@ -175,6 +225,17 @@
                 t.style.zIndex = '';                 // reset stacking
                 }
             }
+            });
+
+            // play pronunciation when clicking the speaker
+            document.querySelectorAll('.speak-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation(); // prevent interfering with drag
+                const text = btn.closest('.dragElement').id; // "rouge", "vert" etc.
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'fr-FR'; // set language to French
+                speechSynthesis.speak(utterance);
+            });
             });
 
     </script>
