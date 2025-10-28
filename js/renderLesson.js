@@ -44,6 +44,14 @@ window.renderLessonFromContent = async function(contentPath, slug){
         `<audio id="${audioId}${i||''}" src="${src}" controls preload="metadata"></audio>`
       ).join('');
 
+      
+      // Add game button if "game" key exists in JSON
+      const gameHtml = t.game
+        ? `<div class="game-link" style="margin-top:10px">
+             <a href="${t.game}" target="_blank" class="btn ghost">🎮 Arrange les mots!</a>
+           </div>`
+        : '';
+
       return `
         <details class="task">
           <summary class="task-summary">
@@ -52,6 +60,7 @@ window.renderLessonFromContent = async function(contentPath, slug){
           <div class="task-body">
             ${audioHtml}
             <div class="text">${linesHtml}</div>
+            ${gameHtml}
           </div>
         </details>
       `;

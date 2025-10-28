@@ -90,6 +90,13 @@
       "description": "Écoute et montre sur la grande image",
       "cover": "./img/book1_unit2_lesson1_img2.jpg",
       "tag": "Débutant"
+    },
+    {
+      "slug": "lesson_13",
+      "title": "Page 14 — Qui fait quoi",
+      "description": "Écoute et montre sur l'image",
+      "cover": "./img/book1_unit2_lesson2_img1.jpg",
+      "tag": "Débutant"
     }
   ],
   "lessons": {
@@ -618,6 +625,51 @@
               "Elle est rose et bleue. Qu’est-ce que c’est ? La gomme ou la trousse ?",  
               "Il est marron. Qu’est-ce que c’est ? Le cartable ou le stylo ?"
           ]
+        }
+      ]
+    },
+    "lesson_13": {
+      "title": "Qui fait quoi?",
+      "breadcrumb": ["Accueil", "Page 14"],
+      "mainImage": "../img/book1_unit2_lesson2_img1.jpg",
+      "tasks": [
+        {
+          "title": "<b>Задание 1:</b> Ecoute (послушай) la poésie (стихотворение) 'S'il te plait' et montre (покажи) le bon (правильное) dessin (изображение).",
+          "audio": "../audio/b1_ch2_audio_26.mp3",
+          "lines": [
+              "S’il te plaît, mon amie Alice,",  
+              "Prête-moi ! Prête-moi !",  
+              "Des ciseaux, un taille-crayon",  
+              "Une gomme et un crayon",  
+              "J’ai oublié ma trousse et mon cartable",  
+              "Merci, mon amie. Tu es formidable !"
+          ]
+        },
+        {
+          "title": "<b>Задание 2:</b> Послушай (écoute) и покажи (montre).",
+          "audio": "../audio/b1_ch2_audio_27.mp3",
+          "lines": [
+              "Léo pose son cartable",
+              "Madame Legrand range la règle dans la trousse.",
+              "Marie demande des ciseaux à Alice: 'Alice, prête-moi tes ciseaux, s'il te plait!'",
+              "Maggie prend les crayons de couleur.",
+              "Alice prête les ciseaux à Marie : «Tiens! Voilà mes ciseaux."
+          ]
+        },
+        {
+          "title": "<b>Задание 3:</b> Послушай (écoute) и ответь (réponds).",
+          "audio": "../audio/b1_ch2_audio_28.mp3",
+          "lines": [
+              "Qui prete les ciseaux a Marie?",
+              "Qui pose son cartable?",
+              "Qui demande des ciseaux à Alice?",
+              "Qui prend les crayons de couleur?",
+              "Qui range la règle dans la trousse?"
+          ]
+        },
+        {
+          "title": "<b>Задание 4:</b> Сыграй в игру.",
+          "game": "../games/arrange-words-unit2-lesson2.html"
         }
       ]
     }

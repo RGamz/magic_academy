@@ -1,0 +1,12 @@
+{
+  "levels": [
+    {
+      "image": "../img/arrange_words_games/arrange_words_game_1_img1.jpg",
+      "sentence": ["Léo", "pose", "un", "crayon", "bleu."]
+    },
+    {
+      "image": "../img/arrange_words_games/arrange_words_game_1_img2.jpg",
+      "sentence": ["Marie", "prend", "sa", "trousse", "violette."]
+    }
+  ]
+}
