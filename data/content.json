@@ -97,6 +97,13 @@
       "description": "Écoute et montre sur l'image",
       "cover": "./img/book1_unit2_lesson2_img1.jpg",
       "tag": "Débutant"
+    },
+    {
+      "slug": "lesson_14",
+      "title": "Page 15 — Nous sommes quel jour aujourd'hui?",
+      "description": "Jours de la semaine",
+      "cover": "./img/book1_unit2_lesson3_img1.png",
+      "tag": "Débutant"
     }
   ],
   "lessons": {
@@ -353,6 +360,7 @@
       "tasks": [
         {
             "title": "<b>Цели урока:</b></span>",
+            "audio": "../audio/b1_ch1_lesson_8_audio_1.mp3", 
             "lines": [
               "Выучить следующие слова и выражения:",
               "<b>chanter, peindre, sauter, téléphoner, apprendre (l'anglais, le français), courir</b>",
@@ -637,6 +645,25 @@
       "mainImage": "../img/book1_unit2_lesson2_img1.jpg",
       "tasks": [
         {
+            "title": "<b>Цели урока:</b></span>",
+            "audio": "../audio/b1_ch2_lesson2_audio1.mp3", 
+            "lines": [
+              "Выучить стихотворение 'S'il te plait'",
+              "Уметь использовать простые правила вежливости (<b>merci, s'il te plait</b>)",
+              "Выучить следующие слова и выражения:",
+              "<b>demander, prêter, prendre, poser, ranger.</b>",
+
+              "Научиться создавать простые фразы состоящие из нескольких частей:",
+              "<b>Léo range/ la gomme / dans la trousse.</b>",
+
+              "Научиться писать следующие слова:",
+              "<b>Des ciseaux, un taille-crayon, une gomme, un crayon, une trousse, un cartable.</b>",
+
+              "Уметь задавать следуюшие вопросы и отвечать на них:",
+              "<b>'Tu fais quoi?', 'Elle fait quoi?'</b>"
+            ]
+            },
+        {
           "title": "<b>Задание 1:</b> Ecoute (послушай) la poésie (стихотворение) 'S'il te plait' et montre (покажи) le bon (правильное) dessin (изображение).",
           "audio": "../audio/b1_ch2_audio_26.mp3",
           "lines": [
@@ -673,6 +700,114 @@
         {
           "title": "<b>Задание 4:</b> Сыграй в игру.",
           "game": "../games/arrange-words-unit2-lesson2.html"
+        }
+      ]
+    },
+    "lesson_14": {
+      "title": "Nous sommes quel jour aujourd'hui?",
+      "breadcrumb": ["Accueil", "Page 15"],
+      "mainImage": "../img/book1_unit2_lesson3_img1.png",
+      "tasks": [
+        {
+            "title": "<b>Цели урока:</b></span>",
+            "audio": "../audio/b1_ch2_lesson2_audio1.mp3", 
+            "lines": [
+              "Выучить следующие слова и выражения:",
+              "<b>dessiner, gommer, tailler, peindre, découper, coller, écrire, donner</b>",
+              "Выучить дни недели",
+              "Научиться понимать и использовать выражения:",
+              "en haut (наверху), en bas (внизу), à gauche (слева), à droite (справа)",
+
+              "Научиться писать дни недели:",
+              "Научиться писать цифры от 0 до 20:",
+
+
+              "Уметь задавать следуюшие вопросы и отвечать на них:",
+              "Спросить какой сегодня день (<b>Nous sommes quel jour aujourd'hui ?</b>)и уметь отвечать на этот вопрос", 
+              "Спросить что кто делает и отвечать на него <b>(Qu'est-ce qu'il fait? Qu'est-ce qu'elles font ? Elles dessinent, elles colorient...) </b>",
+              "Задать вопрос сколько ...(<b>il y a combien de..</b>)" ,
+              "Указать где находится объект"
+            ]
+            },
+        {
+          "title": "<b>Задание 1:</b> Ecoute (послушай) la chanson (песню) 'Mes petits mains' et mime (имитируй).",
+          "audio": "../audio/b1_ch2_audio_29.mp3",
+          "lines": [
+              "Lundi 13",  
+              "Mes petites mains dessinent, dessinent",  
+              "Elles dessinent en haut, elles dessinent en bas, elles dessinent à gauche, elles dessinent à droite.",  
+
+              "Mardi 14",  
+              "Mes petites mains gomment, gomment",  
+              "Elles gomment en haut, elles gomment en bas, elles gomment à gauche, elles gomment à droite.",  
+
+              "Mercredi 15",  
+              "Mes petites mains taillent, taillent",  
+              "Elles taillent en haut, elles taillent en bas, elles taillent à gauche, elles taillent à droite.",  
+
+              "Jeudi 16",  
+              "Mes petites mains peignent, peignent",  
+              "Elles peignent en haut, elles peignent en bas, elles peignent à gauche, elles peignent à droite.",  
+
+              "Vendredi 17",  
+              "Mes petites mains découpent, découpent",  
+              "Elles découpent en haut, elles découpent en bas, elles découpent à gauche, elles découpent à droite.",  
+
+              "Samedi 18",  
+              "Mes petites mains collent, collent",  
+              "Elles collent en haut, elles collent en bas, elles collent à gauche, elles collent à droite.",  
+
+              "Dimanche 19",  
+              "Mes petites mains écrivent, écrivent",  
+              "Elles écrivent en haut, elles écrivent en bas, elles écrivent à gauche, elles écrivent à droite.",  
+
+              "Lundi 20",  
+              "Mes petites mains donnent, donnent",  
+              "Elles donnent en haut, elles donnent en bas, elles donnent à gauche, elles donnent à droite."
+
+          ]
+        },
+        {
+          "title": "<b>Задание 2:</b> Послушай (écoute) и покажи (montre).",
+          "audio": "../audio/b1_ch2_audio_31.mp3",
+          "lines": [
+              "Nous sommes quel jour aujourd’hui ? Nous sommes le lundi 20.",  
+              "Mes petites mains donnent, donnent",  
+              "Elles donnent en haut, elles donnent en bas, elles donnent à gauche, elles donnent à droite.",  
+
+              "Nous sommes quel jour aujourd’hui ? Nous sommes le jeudi 16.",  
+              "Mes petites mains peignent, peignent",  
+              "Elles peignent en haut, elles peignent en bas, elles peignent à gauche, elles peignent à droite.",  
+
+              "Nous sommes le mardi 14.",  
+              "Mes petites mains gomment, gomment",  
+              "Elles gomment en haut, elles gomment en bas, elles gomment à gauche, elles gomment à droite.",  
+
+              "Mercredi 15",  
+              "Mes petites mains taillent, taillent",  
+              "Elles taillent en haut, elles taillent en bas, elles taillent à gauche, elles taillent à droite.",  
+
+              "Vendredi 17",  
+              "Mes petites mains découpent, découpent",  
+              "Elles découpent en haut, elles découpent en bas, elles découpent à gauche, elles découpent à droite.",  
+
+              "Lundi 13",  
+              "Mes petites mains dessinent, dessinent",  
+              "Elles dessinent en haut, elles dessinent en bas, elles dessinent à gauche, elles dessinent à droite."
+          ]
+        },
+        {
+          "title": "<b>Задание 3:</b> Послушай (écoute), повтори (répète) и спой (chante).",
+          "audio": "../audio/b1_ch2_audio_32.mp3",
+          "lines": [
+              "Exemple : Aujourd’hui, nous sommes le lundi 13.",  
+              "Aujourd’hui, nous sommes le lundi 13.",  
+              "Mes petites mains dessinent, dessinent. Elles dessinent en haut, elles dessinent en bas, elles dessinent à gauche, elles dessinent à droite.",
+              "Aujourd’hui, nous sommes le samedi 18.",  
+              "Aujourd’hui, nous sommes le dimanche 19.",  
+              "Aujourd’hui, nous sommes le mardi 14.",  
+              "Aujourd’hui, nous sommes le vendredi 17."
+          ]
         }
       ]
     }
