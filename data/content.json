@@ -442,6 +442,7 @@
       "tasks": [
         {
             "title": "<b>Цели урока:</b></span>",
+            "audio": "../audio/b1_ch1_petitdoc_audio_1.mp3", 
             "lines": [
               "Познакомиться с французским художником и картиной:",
               "<b>Robert Delaunais, Tour Eiffel</b>",
@@ -455,6 +456,7 @@
             },
         { 
             "title": "<b>Задача 1:</b> Посмотреть (regarde) любимую картину Лео (la peinture preferée de Léo).</span>", 
+            "audio": "../audio/b1_ch1_petitdoc_audio_2.mp3", 
             "lines": [
                 "Q: Qu'est-ce que c'est?",  
                 "R: C'est une peinture qui s'appelle 'Tour Eiffel'",  
@@ -463,7 +465,7 @@
                 ] 
             },
             { 
-            "title": "<b>Задача 2:</b> Покажи (montre).</span>", 
+            "title": "<b>Задача 2:</b> Покажи (montre) на картине.</span>", 
             "lines": [
                 "Un carré",  
                 "Un triangle",  
