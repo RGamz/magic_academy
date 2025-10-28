@@ -48,7 +48,7 @@ window.renderLessonFromContent = async function(contentPath, slug){
       // Add game button if "game" key exists in JSON
       const gameHtml = t.game
         ? `<div class="game-link" style="margin-top:10px">
-             <a href="${t.game}" target="_blank" class="btn ghost">🎮 Arrange les mots!</a>
+             <a href="${t.game}" target="_blank" class="btn ghost">🎮 Joue le jeu!</a>
            </div>`
         : '';
 

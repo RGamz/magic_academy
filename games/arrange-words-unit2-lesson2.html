@@ -106,6 +106,7 @@
       <div class="container">
       <nav class="site-nav" aria-label="Navigation principale">
           <a href="../index.html" aria-current="page">Accueil</a>
+          <a href="../lessons/games.html" aria-current="page">Jeux</a>
       </nav>
       </div>
   </header>
@@ -131,30 +132,25 @@
    🧠 STEP 1: Load game data (levels) from an external JSON file
    ============================================================ */
 
-const GAME_DATA_URL = "../data/reorder_game_1.json";  // path to your JSON file
-let levels = [];                              // array to store loaded levels
-let currentLevel = 0;                         // track which level we're on
+const GAME_DATA_URL = "../data/reorder_game_1.json"; // path to JSON
+let levels = [];
+let currentLevel = 0;
 
-// Get references to main DOM elements
 const container = document.getElementById("sentence");
 const img = document.getElementById("level-image");
 const msg = document.getElementById("message");
 const checkBtn = document.getElementById("checkBtn");
 
-// Load JSON when the page starts
 window.addEventListener("DOMContentLoaded", async () => {
   try {
-    const res = await fetch(GAME_DATA_URL);  // load JSON file
+    const res = await fetch(GAME_DATA_URL);
     if (!res.ok) throw new Error("Failed to load JSON");
-    const data = await res.json();           // parse JSON into an object
-    levels = data.levels || [];              // extract levels array
-
+    const data = await res.json();
+    levels = data.levels || [];
     if (levels.length === 0) {
       msg.textContent = "Aucun niveau trouvé dans le fichier JSON.";
       return;
     }
-
-    // Start the game with the first level
     loadLevel(currentLevel);
   } catch (err) {
     console.error(err);
@@ -166,7 +162,6 @@ window.addEventListener("DOMContentLoaded", async () => {
    🧩 STEP 2: Utility functions
    ============================================================ */
 
-// Randomly shuffle an array (so words start mixed up)
 function shuffle(array) {
   return array.sort(() => Math.random() - 0.5);
 }
@@ -175,10 +170,9 @@ function shuffle(array) {
    🎬 STEP 3: Load a level (image + shuffled words)
    ============================================================ */
 function loadLevel(index) {
-  msg.textContent = "";      // clear feedback
-  container.innerHTML = "";  // clear old words
+  msg.textContent = "";
+  container.innerHTML = "";
 
-  // If user completed all levels
   if (index >= levels.length) {
     img.src = "../img/arrange_words_games/arrange_words_game_1_win.jpg";
     msg.innerHTML = "🎉 Tu as terminé tous les niveaux ! Bravo !";
@@ -186,14 +180,10 @@ function loadLevel(index) {
     return;
   }
 
-  // Load level data (image + correct sentence)
   const level = levels[index];
-  img.src = level.image;  // show the level image
-
-  // Make a shuffled copy of the correct sentence
+  img.src = level.image;
   const shuffled = shuffle([...level.sentence]);
 
-  // Create one draggable word element for each word
   shuffled.forEach(word => {
     const el = document.createElement("div");
     el.classList.add("word");
@@ -201,40 +191,77 @@ function loadLevel(index) {
     el.draggable = true;
     container.appendChild(el);
   });
+
+  enableDragAndTouch(); // activate both desktop + mobile drag
 }
 
 /* ============================================================
-   🖱️ STEP 4: Enable drag & drop interaction
+   🖱️ STEP 4: Enable drag & drop (desktop) + touch drag (mobile)
    ============================================================ */
 
-let draggedItem = null;
+function enableDragAndTouch() {
+  let draggedItem = null;
 
-// When user starts dragging a word
-container.addEventListener("dragstart", e => {
-  if (e.target.classList.contains("word")) {
-    draggedItem = e.target;
-    e.target.classList.add("dragging");
-  }
-});
+  /* === DESKTOP DRAG EVENTS === */
+  container.addEventListener("dragstart", e => {
+    if (e.target.classList.contains("word")) {
+      draggedItem = e.target;
+      e.target.classList.add("dragging");
+    }
+  });
 
-// When user drops the word
-container.addEventListener("dragend", e => {
-  e.target.classList.remove("dragging");
-  draggedItem = null;
-});
+  container.addEventListener("dragend", e => {
+    e.target.classList.remove("dragging");
+    draggedItem = null;
+  });
 
-// While dragging, determine where to insert the word
-container.addEventListener("dragover", e => {
-  e.preventDefault();
-  const afterElement = getDragAfterElement(container, e.clientX);
-  if (afterElement == null) {
-    container.appendChild(draggedItem);
-  } else {
-    container.insertBefore(draggedItem, afterElement);
-  }
-});
+  container.addEventListener("dragover", e => {
+    e.preventDefault();
+    const afterElement = getDragAfterElement(container, e.clientX);
+    if (afterElement == null) {
+      container.appendChild(draggedItem);
+    } else {
+      container.insertBefore(draggedItem, afterElement);
+    }
+  });
 
-// Helper: find which element is immediately after the cursor
+  /* === TOUCH EVENTS (for phones/tablets) === */
+  let touchItem = null;
+
+  container.querySelectorAll(".word").forEach(word => {
+    word.addEventListener("touchstart", e => {
+      touchItem = e.target;
+      touchItem.classList.add("dragging");
+      e.preventDefault(); // avoid accidental text selection
+    });
+
+    word.addEventListener("touchmove", e => {
+      const touch = e.touches[0];
+      const elementBelow = document.elementFromPoint(touch.clientX, touch.clientY);
+      const wordBelow = elementBelow?.closest(".word");
+
+      if (wordBelow && wordBelow !== touchItem) {
+        const allWords = [...container.children];
+        const currentIndex = allWords.indexOf(touchItem);
+        const newIndex = allWords.indexOf(wordBelow);
+        if (currentIndex > newIndex) {
+          container.insertBefore(touchItem, wordBelow);
+        } else {
+          container.insertBefore(touchItem, wordBelow.nextSibling);
+        }
+      }
+    });
+
+    word.addEventListener("touchend", e => {
+      touchItem.classList.remove("dragging");
+      touchItem = null;
+    });
+  });
+}
+
+/* ============================================================
+   🔍 Helper: find which element is after cursor (desktop)
+   ============================================================ */
 function getDragAfterElement(container, x) {
   const draggableElements = [...container.querySelectorAll('.word:not(.dragging)')];
   return draggableElements.reduce((closest, child) => {
@@ -251,15 +278,14 @@ function getDragAfterElement(container, x) {
 /* ============================================================
    ✅ STEP 5: Verify order and give feedback
    ============================================================ */
-
 checkBtn.addEventListener("click", checkOrder);
 
 function checkOrder() {
-  const level = levels[currentLevel];                  // get current level data
+  const level = levels[currentLevel];
   const currentWords = [...container.children].map(el => el.textContent);
   let allCorrect = true;
 
-  // Compare each word to the correct answer
+  // Compare each word to the correct position
   [...container.children].forEach((el, i) => {
     if (currentWords[i] === level.sentence[i]) {
       el.classList.add("correct");
@@ -269,8 +295,14 @@ function checkOrder() {
     }
   });
 
-  // If all words correct → success message + buttons
   if (allCorrect) {
+    // ✅ Create and play success audio if available
+    if (level.audio) {
+      const audio = new Audio(level.audio);
+      audio.play().catch(err => console.warn("Audio playback failed:", err));
+    }
+
+    // ✅ Show success message and buttons
     msg.innerHTML = `
       🎉 Bravo !<br>
       <button onclick="retryLevel()">🔁 Rejouer</button>
@@ -281,17 +313,17 @@ function checkOrder() {
   }
 }
 
-/* ============================================================
-   🔁 STEP 6: Buttons for retry and next level
-   ============================================================ */
 
+/* ============================================================
+   🔁 STEP 6: Retry / Next buttons
+   ============================================================ */
 function retryLevel() {
-  loadLevel(currentLevel); // reload same level
+  loadLevel(currentLevel);
 }
 
 function nextLevel() {
   currentLevel++;
-  loadLevel(currentLevel); // load next level
+  loadLevel(currentLevel);
 }
 </script>
 

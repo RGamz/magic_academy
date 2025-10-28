@@ -60,7 +60,7 @@
       "slug": "lesson_9",
       "title": "Page 9 — Qu'est-ce qu'il fait? Exercise de cahier",
       "description": "Exercise de cahier",
-      "cover": "./img/book1_unit1_lesson5_C_img1.jpg",
+      "cover": "./img/book1_unit1_lesson5_C_img1.png",
       "tag": "Débutant"
     },
     {
@@ -341,7 +341,8 @@
                 ] 
             },
             {
-            "title": "<b>Задача 2:</b> Поиграть в игру 'Соедини цвета'!</span>"
+            "title": "<b>Задача 2:</b> Поиграть в игру 'Соедини цвета'!</span>",
+            "game": "../games/colors-game.html"
             }
       ]
     },
