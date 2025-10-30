@@ -104,6 +104,13 @@
       "description": "Jours de la semaine",
       "cover": "./img/book1_unit2_lesson3_img1.png",
       "tag": "Débutant"
+    },
+    {
+      "slug": "lesson_15",
+      "title": "Page 16 — Tu aimes aller à l'école?",
+      "description": "Les activités",
+      "cover": "./img/book1_unit2_lesson4_img1.png",
+      "tag": "Débutant"
     }
   ],
   "lessons": {
@@ -807,6 +814,76 @@
               "Aujourd’hui, nous sommes le dimanche 19.",  
               "Aujourd’hui, nous sommes le mardi 14.",  
               "Aujourd’hui, nous sommes le vendredi 17."
+          ]
+        }
+      ]
+    },
+    "lesson_15": {
+      "title": "Tu aimes aller à l'école?",
+      "breadcrumb": ["Accueil", "Page 16"],
+      "mainImage": "../img/book1_unit2_lesson4_img1.png",
+      "tasks": [
+        {
+            "title": "<b>Цели урока:</b></span>",
+            "audio": "../audio/b1_ch2_lesson4_audio1.mp3", 
+            "lines": [
+              "Выучить следующие слова и выражения:",
+              "<b>j'aime, je n'aime pas, je compte, je dessine, j'écris, je lis, je chante, je recite une poesie, je fais du sport, tu comptes, tu dessines, tu ecris, tu lis, tu recites une poésie, tu fais du sport.</b>",
+
+              "Выучить как называются различные занятия в школе",
+
+              "Научиться писать:",
+              "<b>j'aime / je n'aime pas, compter, lire</b>"
+            ]
+            },
+        {
+          "title": "<b>Задание 1:</b> Regarde (посмотри) le tableau (на таблицу). Ecoute (послушай) et vérifie (проверь).",
+          "audio": "../audio/b1_ch2_audio_33.mp3",
+          "lines": [
+              "JEANNE LEGRAND : Tu aimes aller à l’école, Alice ?",  
+              "ALICE : Oh oui, maman ! J’aime lire, j’aime compter.",  
+              "JEANNE LEGRAND : C’est tout ?",  
+              "ALICE : Non, j’aime aussi réciter des poésies et j’aime être avec mes copines.",  
+              "LUC LEGRAND : Et toi, Léo, tu aimes aller à l’école ",  
+              "LÉO : Oh oui, papa ! Moi, j’aime chanter, réciter des poésies et dessiner. J’aime faire du sport et être avec mes copains.",  
+              "LUC LEGRAND : C’est tout ?",  
+              "LÉO : Euh ! C’est tout !",
+
+              "------------------------",
+              "Тебе нравится идти в школу, Алиса?",
+              "Да, мама! Я люблю читать, люблю считать.",
+              "И всё?",
+              "Нет, я еще люблю читать стихи и я люблю проводить время с подругами",
+              "А ты, Лео, ты любишь идти в школу?",
+              "О да, папа! Я, я люблю петь, читать стихи и рисовать. Я люблю заниматься спортом и проводить время с моими друзьями.",
+              "И всё?",
+              "Нуу, да, всё!"
+          ]
+        },
+        {
+          "title": "<b>Задание 2:</b> Écoute, réponds vrai (правда) ou faux (неправда) et corrige (исправь) si nécessaire (если необходимо).",
+          "audio": "../audio/b1_ch2_audio_34.mp3",
+          "lines": [
+              "Vrai ou faux ? Alice aime lire. → C’est vrai ! Alice aime lire.",  
+              "Vrai ou faux ? Léo aime compter. → C’est faux ! Léo n’aime pas compter.",  
+              "Vrai ou faux ? Alice aime chanter.",  
+              "Vrai ou faux ? Alice et Léo aiment réciter des poésies.",  
+              "Vrai ou faux ? Alice aime dessiner.",  
+              "Vrai ou faux ? Léo aime faire du sport.",  
+              "Vrai ou faux ? Alice et Léo aiment être avec des copains et des copines."
+          ]
+        },
+        {
+          "title": "<b>Задание 3:</b> Послушай (écoute) et complète (дополни).",
+          "audio": "../audio/b1_ch2_audio_35.mp3",
+          "lines": [
+              "Exemple :",  
+              "Alice aime lire. Léo…",  
+              " … n’aime pas lire.",  
+              "Alice aime compter. Léo…",  
+              "Alice n’aime pas chanter. Léo…",  
+              "Alice n’aime pas dessiner. Léo…",  
+              "Alice n’aime pas faire du sport. Léo…"
           ]
         }
       ]

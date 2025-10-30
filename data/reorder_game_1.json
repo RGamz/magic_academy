@@ -12,13 +12,18 @@
     },
     {
       "image": "../img/arrange_words_games/arrange_words_game_1_alice.png",
-      "sentence": ["Salut", "moi", "c'est", "Alice."],
+      "sentence": ["Salut,", "moi", "c'est", "Alice."],
       "audio": "../audio/reorder/moi_cest_alice.mp3"
     },
     {
       "image": "../img/arrange_words_games/arrange_words_game_1_peinture.png",
       "sentence": ["La", "peinture", "preferée", "de", "Léo."],
       "audio": "../audio/reorder/peinture_preferee.mp3"
+    },
+    {
+      "image": "../img/arrange_words_games/arrange_words_game_1_ecole_alice.png",
+      "sentence": ["Tu", "aimes", "aller", "à", "l’école,", "Alice?"],
+      "audio": "../audio/reorder/aller_ecole_alice.mp3"
     }
   ]
 }
