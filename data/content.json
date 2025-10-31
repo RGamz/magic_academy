@@ -111,6 +111,13 @@
       "description": "Les activités",
       "cover": "./img/book1_unit2_lesson4_img1.png",
       "tag": "Débutant"
+    },
+    {
+      "slug": "lesson_16",
+      "title": "Page 17 — Que'est-ce que tu aimes faire pendant la récréation?",
+      "description": "La récré",
+      "cover": "./img/book1_unit2_lesson5_img1.jpg",
+      "tag": "Débutant"
     }
   ],
   "lessons": {
@@ -884,6 +891,91 @@
               "Alice n’aime pas chanter. Léo…",  
               "Alice n’aime pas dessiner. Léo…",  
               "Alice n’aime pas faire du sport. Léo…"
+          ]
+        }
+      ]
+    },
+    "lesson_16": {
+      "title": "Que'est-ce que tu aimes faire pendant la récréation?",
+      "breadcrumb": ["Accueil", "Page 17"],
+      "mainImage": "../img/book1_unit2_lesson5_img1.jpg",
+      "tasks": [
+        {
+            "title": "<b>Цели урока:</b></span>",
+            "audio": "../audio/b1_ch2_lesson5_audio1.mp3", 
+            "lines": [
+              "Выучить выражения касаемые занятий на перемене",
+              "Уметь использовать эти выражения и игры",
+              "Выучить следующие слова и выражения, а также написать их:",
+              "<b>un livre, un ballon, une bille, une corde à sauter, des craies, une marelle, 'Qu'est-ce que tu aimes... ?'</b>"
+            ]
+            },
+        {
+          "title": "<b>Задание 1:</b> Écoute et dis le numéro.",
+          "audio": "../audio/b1_ch2_audio_36.mp3",
+          "lines": [
+              "Exemple :",  
+              "PROFESSEUR : Carole, qu’est-ce que tu aimes faire pendant la récréation ?",  
+              "CAROLE : Moi, j’aime lire sur un banc.",  
+              "NARRATEUR : C’est le numéro 3.",  
+
+              "PROFESSEUR : Et toi ? Qu’est-ce que tu aimes faire pendant la récréation ?",  
+              "GARÇON : Moi, j’aime jouer à cache-cache.",  
+
+              "PROFESSEUR : Et toi ? Qu’est-ce que tu aimes faire ?",  
+              "FILLE : Moi, j’aime jouer à la marelle.",  
+
+              "PROFESSEUR : Et toi, Léo ?",  
+              "LÉO : Moi, j’aime jouer aux billes.",  
+
+              "PROFESSEUR : Et toi ?",  
+              "GARÇON : Moi, j’aime jouer au ballon.",  
+
+              "PROFESSEUR : Et toi ? Qu’est-ce que tu aimes faire pendant la récréation ?",  
+              "GARÇON : Moi, j’aime sauter à la corde.",  
+
+              "PROFESSEUR : Rangez-vous les enfants !",
+
+              "----------------------------------------",
+
+              "Пример:",
+              "УЧИТЕЛЬ: Кароль, что ты любишь делать на перемене?",
+              "КАРОЛЬ: Я люблю читать на скамейке.",
+              "РАССКАЗЧИК: Это номер 3.",
+
+              "УЧИТЕЛЬ: А ты? Что ты любишь делать на перемене?",
+              "МАЛЬЧИК: Я люблю играть в прятки.",
+
+              "УЧИТЕЛЬ: А ты? Что ты любишь делать?",
+              "ДЕВОЧКА: Я люблю играть в классики.",
+
+              "УЧИТЕЛЬ: А ты, Лео?",
+              "ЛЕО: Я люблю играть в шарики.",
+
+              "УЧИТЕЛЬ: А ты?",
+              "МАЛЬЧИК: Я люблю играть в мяч.",
+
+              "УЧИТЕЛЬ: А ты? Что ты любишь делать на перемене?",
+              "МАЛЬЧИК: Я люблю прыгать через скакалку.",
+
+              "УЧИТЕЛЬ: Постройтесь, дети!"
+          ]
+        },
+        {
+          "title": "<b>Задание 2:</b> Écoute et complète.",
+          "audio": "../audio/b1_ch2_audio_37.mp3",
+          "lines": [
+              "Exemple :",  
+              "ADULTE : Numéro 3. Elles lisent un…",  
+              "ENFANTS : …livre.",  
+              "Numéro 2. Ils jouent à…",  
+              "Numéro 6. Ils jouent au…",  
+              "Numéro 4. Ils jouent aux…",  
+              "Numéro 5. Il saute à la…",  
+              "Numéro 1. Ils jouent à la…",
+
+              "Corrigé : 3. livre – 2. cache-cache – 6. ballon – 4. billes – 5. corde – 1. marelle."
+
           ]
         }
       ]
